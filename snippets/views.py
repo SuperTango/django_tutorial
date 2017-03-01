@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from rest_framework import permissions
 from rest_framework import renderers
 from rest_framework import viewsets
@@ -11,6 +11,8 @@ from snippets.models import Snippet
 from snippets.permissions import IsOwnerOrReadOnly
 from snippets.serializers import SnippetSerializer
 from snippets.serializers import UserSerializer
+
+User = get_user_model()
 
 
 @api_view(['GET'])

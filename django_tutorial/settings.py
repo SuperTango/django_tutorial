@@ -73,6 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_tutorial.wsgi.application'
 
+AUTH_USER_MODEL = 'tutorial.UUIDUser'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
